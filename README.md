@@ -43,6 +43,7 @@ $Apps = @(
     "7zip.7zip"
     "Spotify.Spotify"
 )
+```
 
 ## 🚀 How to run
 
