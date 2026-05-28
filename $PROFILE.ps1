@@ -1,29 +1,14 @@
-# ==============================================================================
-# Ultimate Lazy PC Setup Function
-# ==============================================================================
-
 function InstallIt! {
-    <#
-    .SYNOPSIS
-        Automates the installation of essential apps so you don't have to.
-    #>
     Write-Host "Ugh, fine. Starting your lazy-mode PC setup... Sit tight." -ForegroundColor Cyan
 
-    # Verify Winget is actually there
+    # Verify Winget is actually there (If you are running win 10 or newer it will be there)
     if (-not (Get-Command winget -ErrorAction SilentlyContinue)) {
         Write-Error "Winget isn't found! What kind of ancient OS are you running?!"
         return
     }
-
-    # EDIT THIS LIST: Put the exact Winget IDs of the apps you want
+    
     $Apps = @(
-        "Microsoft.VisualStudioCode",
-        "Git.Git",
-        "Discord.Discord",
-        "Opera.OperaGX",
-        "Valve.Steam",
-        "Spotify.Spotify",
-        "Modrinth.ModrinthApp"
+        # Place app IDs you get from "winget search {AppName}" here,
     )
 
     foreach ($App in $Apps) {
