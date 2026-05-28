@@ -61,6 +61,6 @@ Set-ExecutionPolicy Bypass -Scope Process -Force
 
 ## ⚠️ Troubleshooting 
 
-* **"Winget isn't found..."** -> Your OS is either ancien, or your environment varibles are messed up. Install App Installe rfrom the MS store.
+* **"Winget isn't found..."** -> Your OS is either ancient, or your environment varibles are messed up. Install App Installer from the MS store.
 * **"Both standard Winget and MS Store Failed..."** -> The App ID you provided is either trash or the package is broken. Fix the ID yourself, just like the script told you to!!
 * **"cannot be loaded because running scripts is disabled on this system"** -> You skipped step 2 in the run instructions! Windows blocks custom scripts by default to protect you from yourself. Run `Set-ExecutionPolicy Bypass -Scope Process -Force` first. If it *still* says disabled, your work or school IT administrator probably locked it down via Group Policy, and you're stuck doing it manually.
