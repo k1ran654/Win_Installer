@@ -29,8 +29,11 @@ Before you run this, make sure you actually meet the bare minimum requirements:
 The script is currently an empty shell because it doesn't know what you want. You need to tell it what apps to install.
 
 1. Open the script in a text editor.
-2. Find the `$Apps` array (around line 10).
+2. Find the `$Apps` array (line 11).
 3. Add your desired Winget IDs inside the `@(...)` block. 
+4. If you desire, you can even tell it to install Python Packages.
+5. Find the `$Modules` array (line 24)
+6. Add your desired Python Packages inside the `@(...)` block.
 
 > 💡 **Tip:** Find app IDs by opening a terminal and typing: `winget search "your app name"`
 
@@ -40,8 +43,14 @@ $Apps = @(
     "Discord.Discord"
     "Google.Chrome"
     "Git.Git"
-    "7zip.7zip"
     "Spotify.Spotify"
+)
+
+$Modules = @(
+    "requests",
+    "python-dotenv",
+    "Flask",
+    "tkinter"
 )
 ```
 
@@ -56,7 +65,7 @@ Set-ExecutionPolicy Bypass -Scope Process -Force
 ```
 3. Dot-source the script to load the function into your terminal.
 ```Powershell
-. .\path\to\the\script.ps
+. .\path\to\the\script.ps1
 ```
 
 ## ⚠️ Troubleshooting 
